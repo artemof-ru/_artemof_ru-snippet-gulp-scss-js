@@ -9,6 +9,13 @@
 //&display=swar&subset=cyrillic-ext
 // @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap&subset=cyrillic-extg");
 // @import 'settings/_fonts';
+// <libs> =====================================================================================================
+// @import 'libs/baguetteBox';
+// @import 'libs/datepicker';
+// @import 'libs/lightgallery';
+// @import 'libs/nouislider';
+// @import 'libs/popover.min';
+// @import 'libs/tippy';
 // <СЕТКА> =================================================================================================
 @import 'settings/_grid';
 // <Общие стили> ========================================================
@@ -22,12 +29,6 @@
 // @import 'components/_videos';
 // @import 'components/_spollers-block';
 // @import 'components/_tabs-block';
-// @import 'components/baguetteBox';
-// @import 'components/datepicker';
-// @import 'components/lightgallery';
-// @import 'components/nouislider';
-// @import 'components/popover.min';
-// @import 'components/tippy';
 
 /* header */
 @import "_header";
