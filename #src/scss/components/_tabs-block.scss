@@ -1,0 +1,21 @@
+.tabs-block {
+    &__nav {
+        display: flex;
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        cursor: pointer;\
+        
+        &._active {
+
+        }
+    }
+    
+    &__body {}
+
+    &__block {}
+}

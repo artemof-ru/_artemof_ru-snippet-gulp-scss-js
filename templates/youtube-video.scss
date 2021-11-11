@@ -1,0 +1,59 @@
+.video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background-color: #000;
+ 
+    &:hover .video__button-shape,
+    &__button:focus .video__button-shape {
+       fill: #ff0000;
+       fill-opacity: 1;
+    }
+ 
+    &--enabled {
+       cursor: pointer;
+       
+       .video__button {
+          display: block;
+       }
+ 
+    }
+ 
+    &__media {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: none;
+    }
+ 
+    &__button {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 68px;
+       height: 48px;
+       padding: 0;
+       border: none;
+       background-color: transparent;
+       transform: translate(-50%, -50%);
+       outline: none;
+       cursor: pointer;
+       display: none;
+    
+       &-shape {
+          fill: #212121;
+          fill-opacity: 0.8;
+          transition: all 0.2s;
+       }
+ 
+       &-icon {
+          fill: #ffffff;
+       }
+ 
+    }
+ 
+ 
+ }

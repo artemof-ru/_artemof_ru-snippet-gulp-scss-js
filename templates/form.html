@@ -1,0 +1,54 @@
+<form action="#" class="form"><!-- data-ajax="true" action="sendmail.php" method="POST"-->
+    
+    <div class="form__line">
+        <label for="inp" class="form__label">Подпись поля</label>
+        <input id="inp" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Подпись поля" class="input _phone"><!-- _general _email _req-->
+    </div>
+    
+    <div class="form__line">
+        <select name="form[]" class="form">
+            <option value="1" selected="selected">Пункт 1</option>
+            <option value="2">Пункт 2</option>
+            <option value="3">Пункт 3</option>
+            <option value="4">Пункт 4</option>
+        </select>
+    </div>
+
+    <div class="form__line">
+        <div class="quantity">
+            <div class="quantity__button quantity_button_plus"></div>
+            <div class="quantity__input">
+                <input autocomplete="off" type="text" name="form[]" value="1">
+            </div>
+            <div class="quantity__button quantity_button_minus"></div>
+        </div>
+    </div>
+
+    <div class="form__line">
+        <div class="price">
+            <div class="price__range"></div>
+            <div class="price__inputs">
+                <input id="price-start" autocomplete="off" type="text" name="form[]" class="input">
+                <input id="price-end" autocomplete="off" type="text" name="form[]" class="input">
+            </div>
+        </div>
+    </div>
+    <!-- JS
+    @@include('libs/nouislider.js, {}')
+    @@include('libs/wNumb.js, {}') -->
+
+
+
+    <div class="form__line">
+        <label for="inp" class="form__label">Выберите дату</label>
+        <input id="inp" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Подпись поля" class="input _date">
+    </div>
+    <!-- 
+        @@include('libs/datepicker-full.min.js', {})
+        @import "datepicker"
+     -->
+    
+
+    <button type="submit" class="form__btn btn">Отправить</button>
+    
+</form>

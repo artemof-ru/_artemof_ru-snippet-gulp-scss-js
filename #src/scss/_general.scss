@@ -1,0 +1,102 @@
+html {
+   font-size: 10px;
+}
+body{
+   color: #000;
+   font: 400 16px/1.2em $fontFamily;
+   font-style: normal;
+   background-color: #fff;
+   &._lock{
+      overflow: hidden;
+   }
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+.page {
+   flex: 1 1 auto; // для прижатия футера к низу
+}
+.scroll {
+   scrollbar-color: #09bcfe #e0e0e0;
+   scrollbar-width: thin;
+}
+
+
+
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+
+ul {
+
+}
+li {
+
+}
+
+a {
+
+}
+
+p {
+
+}
+
+i {
+
+}
+
+strong {
+
+}
+
+table {
+   thead {}
+   tbody {}
+   tr {}
+   th {}
+   td {}
+}
+
+span {}
+
+img {
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+}
+
+section {
+
+}
+
+._clearfix::after{
+   content: '';
+   clear: both;
+   display: table;
+}
+
+@media screen and (max-width: 576.98px){
+   
+}

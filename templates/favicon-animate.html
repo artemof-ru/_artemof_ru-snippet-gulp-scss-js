@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Animation favicon JS script</title>
+  <link rel="icon" href="fav/1.png">
+  <link rel="shortcut icon" href="fav/1.png">
+</head>
+<body>
+  <script>
+    let counter = 1;
+    let faviconImgs = 26;
+    let favicons = document.querySelectorAll('link');
+
+    function animateFavicon() {
+      favicons.forEach(item => {
+        if (item.getAttribute('rel').indexOf('icon') >= 0) {
+          item.setAttribute('href', 'fav/' + counter + '.png');
+        }
+        counter ++;
+        if (counter == faviconImgs) { counter = 1; }
+      })
+    }
+
+    setInterval(animateFavicon, 100);
+  </script>
+</body>
+</html>

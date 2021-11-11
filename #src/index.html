@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Главная"
+	})
+<body>
+  <div class="wrapper">
+			@@include('_header.html',{})
+
+    <main class="page">
+      <div class="container">
+        <h1 class="page__title"></h1>
+
+        @@include('_video.html');
+
+      </div>
+    </main>
+    <!-- /.main -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title"></h2>
+      </div>
+    </section>
+    <!-- /.section -->
+
+    <div class="content"></div>
+    <!-- /.content -->
+
+    @@include('_footer.html',{})
+  </div>
+  @@include('_popup.html',{})
+  @@include('_js.html',{})
+</body>
+</html>

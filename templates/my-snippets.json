@@ -1,0 +1,917 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+//HTML====================HTML====================HTML====================================================================================================================================================================================================================================================================================================================================================================================================================================
+	"html com": {
+		"scope": "html",
+		"prefix": "com",
+		"body": ["<!-- /.$1 -->\n$0",],
+	},
+  "str": {
+    "skope": "html",
+		"prefix": "sec",
+		"body": "<section class=\"${1:block}\">\n\t<div class='${1:block}__container _container'>\n\t\t<h2 class=\"${1:block}__title title\"></h2>\n\t\t$0\n\t</div>\n</section>",
+		"description": "str"
+	},
+  "quantity": {
+		"scope": "html",
+    "prefix": "qty",
+		"body": "<div class=\"quantity\">\n\t<div class=\"quantity__button quantity__button_plus\"></div>\n\t<div class=\"quantity__input\">\n\t\t<input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\">\n\t</div>\n\t<div class=\"quantity__button quantity__button_minus\"></div>\n</div>",
+		"description": "qty"
+	},
+  "lazy": {
+		"scope": "html,kit",
+		"prefix": "ll",
+		"body": [
+			"<picture>\n\t<source loading=\"lazy\" class=\"_lazy\" data-srcset=\"$1\" type=\"image/webp\" srcset=\"img/icons/loading.gif\">\n\t<img loading=\"lazy\" data-src=\"$1\" class=\"_lazy\" alt=\"\" src=\"img/icons/loading.gif\">\n</picture>"
+		],
+		"description": "lazy"
+	},
+  "cnt": {
+    "scope": "html",
+		"prefix": "cnt",
+		"body": "<div class=\"$1__container _container\">\n\t$0\n</div>",
+		"description": "container"
+	},
+  "img": {
+    "scope": "html",
+		"prefix": "img",
+		"body": "<img src=\"img$1\" alt=\"$2\">$0",
+		"description": "img"
+	},
+  "menu": {
+    "scope": "html",
+		"prefix": "menu",
+		"body": "<div class=\"header__menu menu\">\n\t<button type=\"button\" class=\"menu__icon icon-menu\">\n\t\t<span></span>\n\t\t<span></span>\n\t\t<span></span>\n\t</button>\n\t<nav class=\"menu__body\">\n\t\t<ul class=\"menu__list\">\n\t\t\t<li class=\"menu__item\"><a href=\"\" class=\"menu__link\"></a></li>\n\t\t</ul>\n\t</nav>\n</div>",
+		"description": "menu"
+	},
+	"logo": {
+    "scope": "html",
+		"prefix": "logo",
+		"body": "<a href=\"\" class=\"header__logo\"><img src=\"img/logo.png\" alt=\"\"></a>",
+		"description": "logo"
+	},
+
+  "inp": {
+    "scope": "html,kit",
+		"prefix": "inp",
+		"body": "<input autocomplete=\"off\" type=\"text\" name=\"form[]\" data-error=\"Ошибка\" data-value=\"\" class=\"input\">",
+		"description": "input"
+	},
+	"in": {
+    "scope": "html,kit",
+		"prefix": "in",
+		"body": "<input type=\"text\" name=\"\" class=\"\">",
+		"description": "input"
+	},
+	"qa": {
+		"scope": "html,kit",
+		"prefix": "qa",
+		"body": "<div class=\"quantity\"><div class=\"quantity__button quantity__button_plus _icon-plus\"></div><div class=\"quantity__input\"><input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\"></div><div class=\"quantity__button quantity__button_minus _icon-minus\"></div></div>",
+		"description": "qa"
+	},
+	"txta": {
+		"scope": "html,kit",
+		"prefix": "txta",
+		"body": "<textarea autocomplete=\"off\" name=\"form[]\" data-value=\"$1\" data-error=\"Ошибка\" class=\"input\"></textarea>",
+		"description": "txta"
+	},
+	"inpt": {
+    "scope": "html,kit",
+		"prefix": "inpt",
+		"body": "<input autocomplete=\"off\" type=\"tel\" name=\"form[]\" data-value=\"Телефон\" class=\"input phone\">",
+		"description": "input phone"
+	},
+	"sel": {
+    "scope": "html,kit",
+		"prefix": "sel",
+		"body": "<select name=\"form[]\" class=\"form\">\n\t<option value=\"1\" selected=\"selected\">Пункт №1</option>\n\t<option value=\"2\">Пункт №2</option>\n\t<option value=\"3\">Пункт №3</option>\n\t<option value=\"4\">Пункт №4</option>\n</select>",
+		"description": "sel"
+	},
+	"sel2": {
+    "scope": "html,kit",
+		"prefix": "sel2",
+		"body": "<div class='select content-filter__select'>\n\t<div class='select-title'>\n\t\t<div class='select-title__arrow'></div>\n\t\t<div class='select-title__value'>Доллар США, USD</div>\n\t</div>\n\t<div class='select-options'>\n\t\t<div class='select-options-inside'>\n\t\t\t<div class='select-options__value'>Цена</div>\n\t\t\t<div class='select-options__value'>Название</div>\n\t\t</div>\n\t\t<input type='hidden' name='form[]'>\n\t</div>\n</div>",
+		"description": "sel2"
+	},
+	"opt2": {
+    "scope": "html,kit",
+		"prefix": "opt2",
+		"body": "<div class='options'>\n\t<input value='1' type='hidden' name='form[]' />\n\t<div data-value='1' class='option active'>Text #1</div>\n\t<div data-value='2' class='option'>Text #2</div>\n</div>",
+		"description": "opt2"
+	},
+	"opt": {
+    "scope": "html,kit",
+		"prefix": "opt",
+		"body": "<div class=\"options\">\n\t<label class=\"options__item\">\n\t\t<input class=\"options__input\" checked type=\"radio\" value=\"1\" name=\"form[option]\">\n\t\t<span class=\"options__text\"><span>Text #1</span></span>\n\t</label>\n\t<label class=\"options__item\">\n\t\t<input class=\"options__input\" type=\"radio\" value=\"2\" name=\"form[option]\">\n\t\t<span class=\"options__text\"><span>Text #2</span></span>\n\t</label>\n</div>",
+		"description": "opt"
+	},
+	"chk": {
+    "scope": "html,kit",
+		"prefix": "chk",
+		"body": "<label class=\"checkbox\">\n\t<input data-error=\"Ошибка\" class=\"checkbox__input\" type=\"checkbox\" value=\"1\" name=\"form[]\">\n\t<span class=\"checkbox__text\"><span>${1:Я даю свое согласие на обработку персональных данных в соответствии с <a href=\"\">Условиями</a>}</span></span>\n</label>",
+		"description": "chk"
+	},
+	"btn": {
+    "scope": "html,kit",
+		"prefix": "btn",
+		"body": "<button type=\"submit\" class=\"form__btn btn$1\">${2:Задать вопрос}</button>$0",
+		"description": "btn"
+	},
+  "popuplink_html": {
+		"scope": "html,kit",
+		"prefix": "pl",
+		"body": [
+			"_popup-link"
+		],
+		"description": "popuplink_html"
+	},
+
+
+
+//CSS====================CSS====================CSS====================================================================================================================================================================================================================================================================================================================================================================================================================================
+  
+	"border": {
+		"scope": "scss,css",
+		"prefix": "bb",
+		"body": ["border: ${1:1}px solid $0"],
+	},
+	"border top": {
+		"scope": "scss,css",
+		"prefix": "bbt",
+		"body": ["border-top: ${1:1}px solid $0"],
+	},
+	"border bottom": {
+		"scope": "scss,css",
+		"prefix": "bbb",
+		"body": ["border-bottom: ${1:1}px solid $0"],
+	},
+	"border right": {
+		"scope": "scss,css",
+		"prefix": "bbr",
+		"body": ["border-right: ${1:1}px solid $0"],
+	},
+	"border left": {
+		"scope": "scss,css",
+		"prefix": "bbl",
+		"body": ["border-left: ${1:1}px solid $0"],
+	},
+	"color-var": {
+		"scope": "scss,css",
+		"prefix": "cv",
+		"body": ["color: \\$$0"],
+	},
+	"bg+": {
+		"scope": "scss,css",
+		"prefix": "bg+",
+		"body": [
+			"background: url('../img$0') 0 0 no-repeat;"
+		],
+		"description": "bg+"
+	},
+  "lcm": {
+    "scope": "scss",
+		"prefix": "lcm",
+		"body": [
+			"&:last-child{margin:0px 0px 0px 0px;}"
+		],
+		"description": "lcm"
+	},
+  "hvu": {
+    "scope": "scss"
+		"prefix": "hvu",
+		"body": [
+			"&:hover{text-decoration: underline;}"
+		],
+		"description": "hvu"
+	},
+	"hvn": {
+    "scope": "scss"
+		"prefix": "hvn",
+		"body": [
+			"&:hover{text-decoration: none;}"
+		],
+		"description": "hvn"
+	},
+  "nowrap": {
+    "scope": "css,scss",
+		"prefix": "wsnw",
+		"body": "white-space: nowrap;",
+		"description": "nowrap"
+	},
+  "kf": {
+		"scope": "css,scss",
+    "prefix": "kf",
+		"body": "@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$3\n\t}\n}",
+		"description": "kf"
+	},
+  "sa": {
+		"prefix": "sa",
+		"body": [
+			".slick-arrow{\n\t&.slick-prev{}\n\t&.slick-next{}\n}"
+		],
+		"description": "slick-arrow"
+	},
+  "fb": {
+    "scope": "css,scss",
+		"prefix": "fb",
+		"body": [
+			"display: flex;"
+		],
+		"description": "fb"
+	},
+	"fbi": {
+    "scope": "css,scss",
+		"prefix": "fbi",
+		"body": [
+			"display: inline-flex;"
+		],
+		"description": "fbi"
+	},
+	"fbo": {
+    "scope": "css,scss",
+		"prefix": "fbo",
+		"body": [
+			"order:${1:1};"
+		],
+		"description": "fbo"
+	},
+	"fbs": {
+    "scope": "css,scss",
+		"prefix": "fbs",
+		"body": [
+			"justify-content:${1:space-between};"
+		],
+		"description": "fbs"
+	},
+	"fbai": {
+    "scope": "css,scss",
+		"prefix": "fbai",
+		"body": [
+			"align-items:${1:center};"
+		],
+		"description": "fbai"
+	},
+	"fbw": {
+    "scope": "css,scss",
+		"prefix": "fbw",
+		"body": [
+			"flex-wrap: wrap;"
+		],
+		"description": "fbw"
+	},
+	"fbd": {
+    "scope": "css,scss",
+		"prefix": "fbd",
+		"body": [
+			"flex-direction: column;"
+		],
+		"description": "fbd"
+	},
+	"fbg": {
+    "scope": "css,scss",
+		"prefix": "fbg",
+		"body": [
+			"flex: 1 1 100%;"
+		],
+		"description": "fbg"
+	},
+	"fbga": {
+    "scope": "css,scss",
+		"prefix": "fbga",
+		"body": [
+			"flex: 1 1 auto;"
+		],
+		"description": "fbga"
+	},
+	"fbgh": {
+    "scope": "css,scss",
+		"prefix": "fbgh",
+		"body": [
+			"flex: 0 1 50%;"
+		],
+		"description": "fbgh"
+	},
+	"fbgt": {
+    "scope": "css,scss",
+		"prefix": "fbgt",
+		"body": [
+			"flex: 0 1 33.333%;"
+		],
+		"description": "fbgt"
+	},
+	"fbgq": {
+    "scope": "css,scss",
+		"prefix": "fbgq",
+		"body": [
+			"flex: 0 1 25%;"
+		],
+		"description": "fbgq"
+	},
+	"fbp": {
+    "scope": "css,scss",
+		"prefix": "fbp",
+		"body": [
+			"flex: 0 0 $1px;"
+		],
+		"description": "fbp"
+	},
+	"fbc": {
+    "scope": "css,scss",
+		"prefix": "fbc",
+		"body": [
+			"justify-content:center;align-items: center;"
+		],
+		"description": "fbc"
+	},
+  "lc": {
+    "scope": "scss",
+		"prefix": "lc",
+		"body": [
+			"&:last-child{\n\t$0\n}"
+		],
+		"description": "lc"
+	},
+	"fc": {
+    "scope": "scss",
+		"prefix": "fc",
+		"body": [
+			"&:first-child{\n\t$0\n}"
+		],
+		"description": "fc"
+	},
+	"nc": {
+    "scope": "scss"
+		"prefix": "nc",
+		"body": [
+			"&:nth-child($0){}"
+		],
+		"description": "nc"
+	},
+	"ba": {
+    "scope": "scss",
+		"prefix": "ba",
+		"body": [
+			"&::before,&::after{\n\tcontent:'';\n\t$0\n}"
+		],
+		"description": "ba"
+	},
+	"a": {
+    "scope": "scss",
+		"prefix": "a",
+		"body": [
+			"&::after{\n\tcontent:'';\n\t$0\n}"
+		],
+		"description": "after"
+	},
+	"bf": {
+    "scope": "scss",
+		"prefix": "b",
+		"body": [
+			"&::before{\n\tcontent:'';\n\t$0\n}"
+		],
+		"description": "before"
+	},
+	"hv": {
+    "scope": "scss",
+		"prefix": "hv",
+		"body": [
+			"&:hover{\n\t$0\n}"
+		],
+		"description": "hv"
+	},
+	"hhv": {
+    "scope": "scss,css",
+		"prefix": "hhv",
+		"body": [
+			"@media (any-hover: hover){\n\t&:hover{\n\t\t$0\n\t}\n}"
+		],
+		"description": "hhv"
+	},
+	"acc": {
+    "scope": "scss",
+		"prefix": "acc",
+		"body": [
+			"&:active{\n\t$0\n}"
+		],
+		"description": "acc"
+	},
+	"ac_css": {
+		"scope": "scss,css",
+		"prefix": "ac",
+		"body": [
+			"&._active{\n\t$0\n}"
+		],
+		"description": "ac_css"
+	},
+  "av": {
+    "scope": "scss",
+		"prefix": "av",
+		"body": [
+			"@include adaptiv-value(\"$1\", $2, $3, $4);"
+		],
+		"description": "adaptiv-value"
+	},
+	"avt": {
+    "scope": "scss",
+		"prefix": "avt",
+		"body": [
+			"@include adaptiv-value-to(\"$1\", $2, $3, 320);"
+		],
+		"description": "adaptiv-value"
+	},
+	"avv": {
+    "scope": "scss",
+		"prefix": "avv",
+		"body": [
+			"@include adaptivValueWH(\"$1\", $2, $3);"
+		],
+		"description": "adaptivValueWH"
+	},
+	"pi": {
+    "scope": "scss",
+		"prefix": "pi",
+		"body": [
+			"@include adaptiv-value(\"padding\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pil": {
+    "scope": "scss",
+		"prefix": "pil",
+		"body": [
+			"@include adaptiv-value(\"padding-left\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pir": {
+    "scope": "scss",
+		"prefix": "pir",
+		"body": [
+			"@include adaptiv-value(\"padding-right\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pit": {
+    "scope": "scss",
+		"prefix": "pit",
+		"body": [
+			"@include adaptiv-value(\"padding-top\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pib": {
+    "scope": "scss",
+		"prefix": "pib",
+		"body": [
+			"@include adaptiv-value(\"padding-bottom\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+  "pp": {
+    "scope": "scss,css",
+		"prefix": "pp",
+		"body": [
+			"padding: 0px 0px 0px 0px;"
+		],
+		"description": "padding 0"
+	},
+	"ppp": {
+    "scope": "scss,css",
+		"prefix": "ppp",
+		"body": [
+			"padding: 0px $1px;"
+		],
+		"description": "padding l + r"
+	},
+	"ppt": {
+    "scope": "scss,css",
+		"prefix": "ppt",
+		"body": [
+			"padding: $1px 0px 0px 0px;"
+		],
+		"description": "padding top"
+	},
+	"ppb": {
+    "scope": "scss,css",
+		"prefix": "ppb",
+		"body": [
+			"padding: 0px 0px $1px 0px;"
+		],
+		"description": "padding bottom"
+	},
+	"ppl": {
+    "scope": "scss,css",
+		"prefix": "ppl",
+		"body": [
+			"padding: 0px 0px 0px $1px;"
+		],
+		"description": "padding left"
+	},
+	"ppr": {
+    "scope": "scss,css",
+		"prefix": "ppr",
+		"body": [
+			"padding: 0px $1px 0px 0px;"
+		],
+		"description": "padding right"
+	},
+	"mm": {
+    "scope": "scss,css",
+		"prefix": "mm",
+		"body": [
+			"margin: 0px 0px 0px 0px;"
+		],
+		"description": "margin"
+	},
+	"mr": {
+    "scope": "scss,css",
+		"prefix": "mr",
+		"body": [
+			"margin: 0px 0px 0px auto;"
+		],
+		"description": "margin"
+	},
+	"mmm": {
+    "scope": "scss,css",
+		"prefix": "mmm",
+		"body": [
+			"margin: 0px $1px;"
+		],
+		"description": "margin2"
+	},
+	"mmt": {
+    "scope": "scss,css",
+		"prefix": "mmt",
+		"body": [
+			"margin: $1px 0px 0px 0px;"
+		],
+		"description": "margin top"
+	},
+	"mmb": {
+    "scope": "scss,css",
+		"prefix": "mmb",
+		"body": [
+			"margin: 0px 0px $1px 0px;"
+		],
+		"description": "margin bottom"
+	},
+	"mml": {
+    "scope": "scss,css",
+		"prefix": "mml",
+		"body": [
+			"margin: 0px 0px 0px $1px;"
+		],
+		"description": "margin left"
+	},
+	"mmr": {
+    "scope": "scss,css",
+		"prefix": "mmr",
+		"body": [
+			"margin: 0px $1px 0px 0px;"
+		],
+		"description": "margin right"
+	},
+	"mu": {
+    "scope": "scss,css",
+		"prefix": "ma",
+		"body": [
+			"margin: 0px auto;"
+		],
+		"description": "margin 0 center"
+	},
+	"mc": {
+    "scope": "scss,css",
+		"prefix": "mc",
+		"body": [
+			"margin:auto;"
+		],
+		"description": "margin center"
+	},
+  
+  "ps": {
+    "scope": "scss,css",
+		"prefix": "ps",
+		"body": [
+			"position: absolute;width: 100%;height: 100%;top: 0;left: 0;"
+		],
+		"description": "position absolute"
+	},
+  "bs": {
+    "scope": "scss,css",
+		"prefix": "bs",
+		"body": [
+			"box-shadow: ${1:0}px ${2:0}px ${3:5}px ${4:0}px rgba(${5:0, 0, 0, 0.3});"
+		],
+		"description": "bs"
+	},
+  "c0": {
+    "scope": "scss,css",
+		"prefix": "c0",
+		"body": [
+			"color:#000;"
+		],
+		"description": "c0"
+	},
+	"wa": {
+    "scope": "scss,css",
+		"prefix": "wa",
+		"body": [
+			"width: auto;"
+		],
+		"description": "wa"
+	},
+	"ha": {
+    "scope": "scss,css",
+		"prefix": "ha",
+		"body": [
+			"height: auto;"
+		],
+		"description": "ha"
+	},
+	"color": {
+    "scope": "scss,css",
+		"prefix": "c",
+		"body": [
+			"color: #${1:fff};"
+		],
+		"description": "color"
+	},
+  "an": {
+    "scope": "scss,css",
+		"prefix": "an",
+		"body": [
+			"animation:${1:name} 1s infinite linear;"
+		],
+		"description": "aa"
+	},
+	"ts": {
+    "scope": "scss,css",
+		"prefix": "tr",
+		"body": [
+			"transition: ${1:all} 0.${2:3}s ease 0s;$3"
+		],
+		"description": "transition"
+	},
+	"tfr": {
+    "scope": "scss,css",
+		"prefix": "tfr",
+		"body": [
+			"transform: rotate(-${1:180}deg);"
+		],
+		"description": "ar"
+	},
+	"tfs": {
+    "scope": "scss,css",
+		"prefix": "tfs",
+		"body": [
+			"transform: scale(${1:1});"
+		],
+		"description": "as"
+	},
+	"tft": {
+    "scope": "scss,css",
+		"prefix": "tft",
+		"body": [
+			"transform: translate(${1:0}px,${2:0}px);$3"
+		],
+		"description": "at"
+	},
+	"tftt": {
+    "scope": "scss,css",
+		"prefix": "tftt",
+		"body": [
+			"transform: translate(0px,0px) rotate(0deg) scale(1) skew(0,0);"
+		],
+		"description": "at"
+	},
+  "@media xs": {
+    "scope": "scss,css",
+    "prefix": "xs",
+    "body": ["@media screen and (max-width: 575.98px){\n\t$0\n}"]
+  },
+  "@media smm": {
+    "scope": "scss,css",
+    "prefix": "smm",
+    "body": ["@media screen and (min-width: 575.98px){\n\t$0\n}"]
+  },
+  "@media sm": {
+    "scope": "scss,css",
+    "prefix": "sm",
+    "body": ["@media screen and (max-width: 767.98px){\n\t$0\n}"]
+  },
+  "@media mdm": {
+    "scope": "scss,css",
+    "prefix": "mdm",
+    "body": ["@media screen and (min-width: 767.98px){\n\t$0\n}"]
+  },
+  "@media md": {
+    "scope": "scss,css",
+    "prefix": "md",
+    "body": ["@media screen and (max-width: 991.98px){\n\t$0\n}"]
+  },
+  "@media lgm": {
+    "scope": "scss,css",
+    "prefix": "lgm",
+    "body": ["@media screen and (min-width: 991.98px){\n\t$0\n}"]
+  },
+  "@media lg": {
+    "scope": "scss,css",
+    "prefix": "lg",
+    "body": ["@media screen and (max-width: 1199.98px){\n\t$0\n}"]
+  },
+  "@media xlm": {
+    "scope": "scss,css",
+    "prefix": "xlm",
+    "body": ["@media screen and (min-width: 1199.98px){\n\t$0\n}"]
+  },
+  "@media xl": {
+    "scope": "scss,css",
+    "prefix": "xl",
+    "body": ["@media screen and (max-width: 1399.98px){\n\t$0\n}"]
+  },
+  "@media xxlm": {
+    "scope": "scss,css",
+    "prefix": "xxlm",
+    "body": ["@media screen and (min-width: 1399.98px){\n\t$0\n}"]
+  },
+  //grid all-container
+  "all container": {
+    "scope": "scss,css",
+    "prefix": "allc",
+    "body": [
+    "._container{",
+    "\twidth: 100%;",
+    "\tmax-width: 1170px;",
+    "\tmargin: 0 auto;",
+    "}",
+    "@media screen and (max-width: 1199.98px){",
+    "\t._container{",
+    "\t\tmax-width: 960px;",
+    "\t}",
+    "}",
+    "@media screen and (max-width: 992.98px){",
+    "\t._container{",
+    "\t\tmax-width: 720px;",
+    "\t}",
+    "}",
+    "@media screen and (max-width: 768.98px){",
+    "\t._container{",
+    "\t\tmax-width: 540px;",
+    "\t}",
+    "}",
+    "@media screen and (max-width: 576.98px){",
+    "\t._container{",
+    "\t\tmax-width: 100%;",
+    "\t\tpadding: 0px 15px;",
+    "\t}",
+    "}",
+    "._container-fluid {",
+    "\tmax-width: 100%;",
+    "\twidth: 100%;",
+    "\tpadding: 0 15px;",
+    "\tmargin: 0 auto;",
+    "",
+    ],
+  },
+  // @include adaptiv-font
+  // "scss @af": {
+  // 	"prefix": "@af",
+  // 	"body": ["@include adaptiv-font(${1:pcSize}, ${2:mobSize}, ${3:maxSize})",],
+  // 	"description": "scss @inc adaptiv-font"
+  // },
+  // comment ===========
+  "scss line": {
+    "scope": "scss,css",
+    "prefix": "comline",
+    "body": ["// ================================================================================================ \n$0",],
+  },
+  "fo": {
+    "scope": "scss,css",
+    "prefix": "font",
+    "body": "font: ${1:4}00 ${2:16}px/${3:1.2} \\$font-${0:general}",
+    // "body": "font: ${1:4}00 ${2:16}rem/${3:1.4}em ${4|$fontFamily, $fontSecond, $fontThird|};$0",
+  },
+  "fov": {
+    "scope": "scss,css",
+    "prefix": "fontv",
+    "body": "font: ${1:4}00 ${2:16}px/${3:1.2} ${4|$font-general, $font-second, $font-third|};$0",
+  },
+  "forem": {
+    "scope": "scss,css",
+    "prefix": "fontrem",
+    "body": "font: ${1:4}00 ${2:16}rem/${3:1.2} ${4:\\$fontFamily}",
+  },
+  "fovrem": {
+    "scope": "scss,css",
+    "prefix": "fontvrem",
+    "body": "font: ${1:4}00 ${2:16}rem/${3:1.2} ${4|$fontFamily, $fontSecond, $fontThird|};$0",
+  },
+
+
+
+  "AddFont": {
+    "scope": "scss",
+    "prefix": "@inf",
+    "body": [
+      "@include font(\"$1\",\"$2\",\"400\",\"normal\");"
+    ],
+    "description": "AddFont"
+  },
+  "AdaptFont": {
+    "scope": "scss",
+    "prefix": "@inaf",
+    "body": [
+      "@include adaptiv-value(\"font-size\", $1, $2, 1);"
+    ],
+    "description": "AdaptFont"
+  },
+  "REM": {
+    "scope": "scss",
+    "prefix": "fzr",
+    "body": [
+      "font-size: $1/\\$fontSize * 1rem;"
+    ],
+    "description": "AddFont"
+  },
+//JS====================JS====================JS====================================================================================================================================================================================================================================================================================================================================================================================================================================
+	"js_click": {
+		"prefix": "click",
+		"body": "${1:item}.addEventListener(\"click\", function(e) {\n\t$2\n});",
+		"description": "js_click"
+	},
+	"jq$": {
+		"prefix": "$",
+		"body": "$('$0')",
+		"description": "jq"
+	},
+	"jq_this": {
+		"prefix": "this",
+		"body": "$(this)",
+		"description": "jq"
+	},
+	"getElementsByClassName": {
+		"scope": "javascript,typescript",
+		"prefix": "dc",
+		"body": [
+			"const ${1:var} = document.getElementsByClassName('$2');"
+		],
+		"description": "getElementsByClassName"
+	},
+	"document.querySelector": {
+		"scope": "javascript,typescript",
+		"prefix": "dq",
+		"body": [
+			"const ${1:var} = document.querySelector('.$2');"
+		],
+		"description": "document.querySelector"
+	},
+	"document.querySelectorAll": {
+		"scope": "javascript,typescript",
+		"prefix": "dqa",
+		"body": [
+			"const ${1:var} =document.querySelectorAll('.$2');"
+		],
+		"description": "document.querySelectorAll"
+	},
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": [
+			"console.log('$1');"
+		],
+		"description": "Log output to console"
+	},
+//PHP====================PHP====================PHP====================================================================================================================================================================================================================================================================================================================================================================================================================================
+	"php com": {
+		"scope": "php",
+		"prefix": "com",
+		"body": ["/* ================================= $1 ================================= */\n$0",],
+	},
+//OTHER====================OTHER====================OTHER====================================================================================================================================================================================================================================================================================================================================================================================================================================
+	"ac_html": {
+		"scope": "html,javascript",
+		"prefix": "ac",
+		"body": [
+			"_active"
+		],
+		"description": "ac_html"
+	},
+	"sp": {
+		"scope": "css,scss,js",
+		"prefix": "sp",
+		"body": "//========================================================================================================================================================\n$1",
+		"description": "sp"
+	},
+	"ct": {
+		"scope": "css,scss,js",
+		"prefix": "ct",
+		"body": "_container",
+		"description": "ct"
+	},
+}

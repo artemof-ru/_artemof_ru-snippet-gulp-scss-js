@@ -1,0 +1,43 @@
+<!-- 
+    @@include('libs/smoothScroll.js', {})
+    @@include('files/scroll.js', {})
+ -->
+
+<div class="section _src-item">При скролле</div>
+<div class="section _src-item">в видимом на экране блоке</div>
+<div class="section _src-item">добавляется класс ._active</div>
+<div class="section _src-item">Чтобы класс _active не пропадал, нежно закоментить scr_item.classList.remove('_active')</div>
+.text {
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    margin: 0px 0px 50px 0px;
+    a {
+        color: red;
+    }
+    &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+
+
+<!-- элементы навигации -->
+<header class="header">
+    <div class="container">
+      <div class="menu header-menu">
+        <div class="menu-icon icon-menu">
+          <span></span><span></span><span></span>
+        </div>
+        <nav class="menu-body">
+          <ul class="menu-list">
+            <li><a href="#tabs-block" class="menu__link _goto">Табы</a></li> <!-- _goto-block - при фокусе на блоке доб. класс _active -->
+            <li><a href="#form" class="menu__link _goto">Форма</a></li>
+            <li><a href="#gallery-block" class="menu__link _goto">Галерея</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.menu -->
+    </div>
+  </header>

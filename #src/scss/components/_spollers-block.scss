@@ -1,0 +1,46 @@
+.spoillers-block {
+    &__item {}
+
+    &__title {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            transform: translate(0, -50%) rotate(-45deg);
+            transition: transform 0.3s ease 0s;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 29px;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            transform: translate(0, -50%) rotate(-45deg);
+            transition: transform 0.3s ease 0s;
+        }
+
+        &._active {
+
+            &::before {
+                transform: translate(0, -50%) rotate(45deg);
+            }
+
+            &::after {
+                transform: translate(0, -50%) rotate(-45deg);
+            }
+        }
+    }
+
+    &__body {
+        display: none;
+    }
+}

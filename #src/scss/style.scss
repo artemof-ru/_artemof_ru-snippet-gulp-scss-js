@@ -1,0 +1,45 @@
+@use "sass:math";
+// <МИКСИНЫ> ===================================================================================================
+@import 'settings/_mixins';
+// <vars> ================================================================================================
+@import 'settings/_vars';
+// <ОБНУЛЕНИЕ> ================================================================================
+@import 'settings/_null';
+// <ШРИФТЫ> ====================================================================================================
+//&display=swar&subset=cyrillic-ext
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap&subset=cyrillic-extg");
+// @import 'settings/_fonts';
+// <СЕТКА> =================================================================================================
+@import 'settings/_grid';
+// <Общие стили> ========================================================
+@import '_general';
+
+// <components> =====================================================================================================
+@import 'components/_icons';
+@import 'components/_ui';
+@import 'components/_btns';
+// @import 'components/_forms';
+// @import 'components/_videos';
+// @import 'components/_spollers-block';
+// @import 'components/_tabs-block';
+// @import 'components/baguetteBox';
+// @import 'components/datepicker';
+// @import 'components/lightgallery';
+// @import 'components/nouislider';
+// @import 'components/popover.min';
+// @import 'components/tippy';
+
+/* header */
+@import "_header";
+/* main */
+@import "pages/01-main";
+/* reason */
+@import "pages/02-section";
+/* footer */
+@import "_footer";
+
+/* popup */
+@import "components/_popups";
+
+// /* IE hacks - Internet Explorer hacks */
+// @import "settings/ie-browsers";
